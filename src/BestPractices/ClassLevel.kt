@@ -40,8 +40,8 @@ class Person(val name: String, val age: Int) {
     //companion object to create a factory
     companion object {
         //factory method, Create person by gender
-        fun createPerson(gender: Gender) {
-            when (gender) {
+        fun createPerson(gender: Gender): Person {
+            return when (gender) {
                 Gender.MALE -> Person("male", 24)
                 Gender.FEMALE -> Person("female", 24)
             }
@@ -62,6 +62,6 @@ fun main() {
     var p2 = Person("xin", 29)
     var samePerson = Person.personComparator.compare(p1, p2) >= 0
     println(samePerson)
-    Person.createPerson("xin", 30)
-
+    var p3 = Person.createPerson(Gender.FEMALE)
+    println(p3.name)
 }
