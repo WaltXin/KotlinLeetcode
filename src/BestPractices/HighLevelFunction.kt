@@ -3,13 +3,6 @@ package BestPractices
 /**
  * High level function means function can outside of class level
  * */
-
-fun main() {
-    var program = Program()
-    //println(program.fibonacci(8, { println(it)}))
-    println(program.fibonacci(8, ::println))
-}
-
 //implement strategy pattern
 class Program {
     // 1, 1, 2, 3, 5, 8, 13
@@ -27,4 +20,32 @@ class Program {
         }
         return curr
     }
+}
+
+class VanCity {
+    var name: String = ""
+    var population: Int = 0
+
+    fun moveToHere() {}
+}
+
+fun main() {
+    var program = Program()
+    var total = 0
+    //println(program.fibonacci(8, { println(it)}))
+    println(program.fibonacci(8, ::println))
+    //closures, in Java, this won't work, because Java lambda can't mutate value
+    program.fibonacci(8) { total += it}
+    println(total)
+
+    var city = VanCity()
+    with(city) {
+        name = "vancouver"
+        population = 670000
+    }
+    //apply method can used for build pattern
+    city.apply {
+        name = "vancouver"
+        population = 670000
+    }.moveToHere()
 }
