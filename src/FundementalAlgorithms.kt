@@ -27,6 +27,10 @@ fun insertSort(list: MutableList<Int>) {
 
 //Todo: mergeSort, quickSort, bucketSort
 
+fun mergeSort(list: MutableList<Int>) {
+    
+}
+
 fun main() {
     bubbleSort(mutableListOf(4,5,3,1,2))
     insertSort(mutableListOf(4,5,3,1,2))

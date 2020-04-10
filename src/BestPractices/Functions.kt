@@ -41,6 +41,7 @@ infix operator fun Header.plus(other: Header) : Header {
     return Header(this.name + other.name)
 }
 
+
 fun main() {
     println(
         "xin wei".getFirstWord()
