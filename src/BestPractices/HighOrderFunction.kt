@@ -16,10 +16,6 @@ fun highOrderFuncMultiply(a: Int, b:Int, func: (Int, Int) -> Int) {
     println(res)
 }
 
-/**
- * High order function means function can outside of class level
- * */
-//implement strategy pattern
 class Program {
     // 1, 1, 2, 3, 5, 8, 13
     fun fibonacci(limit: Int, action: (Int) -> Unit): Int{
