@@ -1,7 +1,12 @@
 package KotlinCoroutines
 
 import kotlinx.coroutines.*
-import java.lang.Exception
+
+/**
+ * Join: Need wait join job finished
+ * Cancel: If take too long, manually cancel the job
+ * Timeout: Set up the timeout time
+ * */
 
 fun main() = runBlocking {
     //joinFunc()
